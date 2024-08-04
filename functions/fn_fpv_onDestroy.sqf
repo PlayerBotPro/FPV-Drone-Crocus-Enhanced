@@ -11,10 +11,10 @@ private _missileType = "";
 private _uavType = toLower (typeOf _uav);
 
 if (_uavType find "at" > -1) then {
-	_missileType = "FPV_RPG42_AT";
+	_missileType = "R_PG7_F";
 } else {
 	if (_uavType find "ap" > -1) then {
-		_missileType = "R_TBG32V_F";
+		_missileType = "DemoCharge_Remote_Ammo";
 	};
 };
 
