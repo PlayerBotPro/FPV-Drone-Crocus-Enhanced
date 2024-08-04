@@ -1759,6 +1759,7 @@ class CfgVehicles
 		scopeCurator=2;
 		displayName="Crocus AT Bag OPFOR";
 		author="DarkBall";
+		mass=33;
 		class assembleInfo
 		{
 			assembleTo="O_Crocus_AT";
@@ -1774,6 +1775,7 @@ class CfgVehicles
 		scopeCurator=2;
 		displayName="Crocus AP Bag OPFOR";
 		author="DarkBall";
+		mass=33;
 		class assembleInfo
 		{
 			assembleTo="O_Crocus_AP";
@@ -1789,6 +1791,7 @@ class CfgVehicles
 		scopeCurator=2;
 		displayName="Crocus AT Bag BLUFOR";
 		author="DarkBall";
+		mass=33;
 		class assembleInfo
 		{
 			assembleTo="B_Crocus_AT";
@@ -1804,6 +1807,7 @@ class CfgVehicles
 		scopeCurator=2;
 		displayName="Crocus AP Bag BLUFOR";
 		author="DarkBall";
+		mass=33;
 		class assembleInfo
 		{
 			assembleTo="B_Crocus_AP";
@@ -1819,6 +1823,7 @@ class CfgVehicles
 		scopeCurator=2;
 		displayName="Crocus AT Bag IND";
 		author="DarkBall";
+		mass=33;
 		class assembleInfo
 		{
 			assembleTo="I_Crocus_AT";
@@ -1834,6 +1839,7 @@ class CfgVehicles
 		scopeCurator=2;
 		displayName="Crocus AP Bag IND";
 		author="DarkBall";
+		mass=33;
 		class assembleInfo
 		{
 			assembleTo="I_Crocus_AP";
