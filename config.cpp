@@ -20,7 +20,8 @@ class CfgPatches
 			"B_Crocus_AT",
 			"B_Crocus_AP",
 			"I_Crocus_AT",
-			"I_Crocus_AP"
+			"I_Crocus_AP",
+			"FPV_Retranslator"
 		};
 		weapons[]={};
 	};
