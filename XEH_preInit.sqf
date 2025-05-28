@@ -1,3 +1,5 @@
+// need further dev. now may create duplicate settings
+
 [ 
     "FPV_DefaultText",
     "EDITBOX",
