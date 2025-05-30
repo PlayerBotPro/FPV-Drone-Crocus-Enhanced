@@ -10,4 +10,22 @@ class CfgVehicles {
 	class BOT_vehicle_FPV_xx: O_Crocus_AT {
 		//inherent from O_Crocus_AT?
 	};
+
+	// Item (Ground weapon holder)
+	class Item_Base_F;
+	// maybe add a base class
+	class Bot_Item_FPV_xx: Item_Base_F {
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "$STR_Mavic_Item_Mavic3_displayName";
+		author = "$STR_Mavic_Author";
+		vehicleClass = "Items";
+		class TransportItems {
+			// make sure its CfgWeapons class?
+			class _xx_BOT_weapon_ItemFPV_1 {
+				name = "BOT_weapon_ItemFPV_1";
+				count = 1;
+			};
+		};
+	};
 };
