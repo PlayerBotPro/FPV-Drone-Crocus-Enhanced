@@ -6,4 +6,8 @@ class CfgVehicles {
 		displayName="FPV Signal Booster";
 	};
 
+	// The real flying FPV
+	class BOT_vehicle_FPV_xx: O_Crocus_AT {
+		//inherent from O_Crocus_AT?
+	};
 };
