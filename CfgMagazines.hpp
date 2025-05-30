@@ -1,0 +1,1 @@
+// in inventory item, after pick up
