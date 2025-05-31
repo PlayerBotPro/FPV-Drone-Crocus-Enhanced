@@ -20,4 +20,21 @@ class CfgWeapons {
     class BOT_weapon_ItemFPV_2: BOT_weapon_ItemFPV_base {
         scope = 2;
     };
+
+    //throwables to fly a UAV
+    class GrenadeLauncher;
+    class Throw: GrenadeLauncher {
+        Muzzles[] += {
+            "fpv_1_muzzle",
+            "fpv_2_muzzle"
+        };
+        class ThrowMuzzle: GrenadeLauncher {};
+		class fpv_1_muzzle: ThrowMuzzle {
+            // CfgMagazines class name
+            magazines[] = {"fpv_1_muzzle_magazine"};
+        };
+		class fpv_2_muzzle: ThrowMuzzle {
+            magazines[] = {"fpv_2_muzzle_magazine"};
+        };
+    };
 };
