@@ -10,6 +10,12 @@ class CfgVehicles {
 	class BOT_vehicle_FPV_xx: O_Crocus_AT {
 		//inherent from O_Crocus_AT?
 	};
+	class BOT_vehicle_FPV_Fiber: O_Crocus_AT {
+		//inherent from O_Crocus_AT?
+	};
+	class BOT_vehicle_FPV_TI: O_Crocus_AT {
+		//inherent from O_Crocus_AT?
+	};
 
 	// Item (Ground weapon holder)
 	class Item_Base_F;
