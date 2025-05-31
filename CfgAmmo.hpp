@@ -37,5 +37,13 @@ class CfgAmmo {
 		class Eventhandlers {
 			init = "_this call BOT_fnc_fpv_deploy";
 		};
+		
+		// Thanks RF CDLC
+		BOT_vehicleSide = {
+			"BOT_vehicle_B_FPV_xx",
+			"BOT_vehicle_O_FPV_xx",
+			"BOT_vehicle_I_FPV_xx",
+			"BOT_vehicle_C_FPV_xx"
+		};
 	};
 };
