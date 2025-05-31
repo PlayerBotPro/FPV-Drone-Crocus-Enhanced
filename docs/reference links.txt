@@ -1,3 +1,17 @@
 https://www.abc.net.au/news/2023-04-01/fpv-racing-drone-kamikaze-attacks-ukraine-russia-war/102155702
 https://live-production.wcms.abc-cdn.net.au/b94bf9c8a8199bba971a31459920d4ca
 
+// show fly option when have fpv in inventory
+class CfgVehicles {
+    class Man;
+    class CAManBase: Man {
+        class ACE_SelfActions {
+            class ACE_Equipment {
+                class ACE_PutInEarplugs {
+                    displayName = CSTRING(EarPlugs_On);
+                    condition = QUOTE(GVAR(enableCombatDeafness) && {!(_player getVariable [ARR_2('ACE_hasEarPlugsIn',false)]) && {[ARR_2(_player,'ACE_EarPlugs')] call EFUNC(common,hasItem)}});
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
+                    statement = QUOTE([ARR_2(_player,true)] call FUNC(putInEarPlugs));
+                    showDisabled = 0;
+                    icon = QPATHTOF(UI\ACE_earplugs_x_ca.paa);
+                };
