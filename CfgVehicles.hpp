@@ -7,8 +7,9 @@ class CfgVehicles {
 	};
 
 	// The real flying FPV
-	class BOT_vehicle_FPV_xx: O_Crocus_AT {
-		//inherent from O_Crocus_AT?
+	class BOT_vehicle_B_FPV_AT: B_Crocus_AT {
+	};
+	class BOT_vehicle_B_FPV_AP: B_Crocus_AP {
 	};
 	class BOT_vehicle_FPV_Fiber: O_Crocus_AT {
 		//inherent from O_Crocus_AT?

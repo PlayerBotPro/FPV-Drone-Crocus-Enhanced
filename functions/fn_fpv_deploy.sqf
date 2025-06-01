@@ -3,7 +3,7 @@
         PlayerBot
 
 	Description:
-		Triggers when throws out a FPV
+		Triggers when throws out a FPV, modified from RF CDLC
 
 	Parameter(s):
 		Same as "Init" Projectile Event Handler
@@ -48,7 +48,7 @@ _uav setVelocity _pVel;
 _uav flyInHeight (ASLToAGL eyePos driver _uav);
 
 if (has UAV Terminal) then {
-    player connectTerminalToUAV _mavic;
-    driver _mavic switchCamera "Internal";
-    player remoteControl _mavic;
+    player connectTerminalToUAV _uav;
+    driver _uav switchCamera "Internal";
+    player remoteControl _uav;
 };

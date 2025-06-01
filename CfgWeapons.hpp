@@ -1,5 +1,7 @@
 class CfgWeapons {
-    class CBA_MiscItem;
+    // ******
+    // its currently not useful if fpv is a throwable
+/*     class CBA_MiscItem;
     class CBA_MiscItem_ItemInfo;
     // in inventory item
 	class BOT_weapon_ItemFPV_base: CBA_MiscItem {
@@ -20,21 +22,22 @@ class CfgWeapons {
     class BOT_weapon_ItemFPV_2: BOT_weapon_ItemFPV_base {
         scope = 2;
     };
-
+ */
+ 
     //throwables to fly a UAV
     class GrenadeLauncher;
     class Throw: GrenadeLauncher {
         Muzzles[] += {
-            "fpv_1_muzzle",
-            "fpv_2_muzzle"
+            "BOT_weapon_fpv_AT_muzzle",
+            "BOT_weapon_fpv_AP_muzzle"
         };
         class ThrowMuzzle: GrenadeLauncher {};
-		class fpv_1_muzzle: ThrowMuzzle {
+		class BOT_weapon_fpv_AT_muzzle: ThrowMuzzle {
             // CfgMagazines class name
-            magazines[] = {"fpv_1_muzzle_magazine"};
+            magazines[] = {"BOT_magazine_fpv_AT_muzzle"};
         };
-		class fpv_2_muzzle: ThrowMuzzle {
-            magazines[] = {"fpv_2_muzzle_magazine"};
+		class BOT_weapon_fpv_AP_muzzle: ThrowMuzzle {
+            magazines[] = {"BOT_weapon_fpv_AP_muzzle"};
         };
     };
 };

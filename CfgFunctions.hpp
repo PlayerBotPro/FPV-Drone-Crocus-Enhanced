@@ -1,4 +1,5 @@
 class CfgFunctions {
+	// Overwrite function from original mod
 	class DB {
 		// you can change FPV to any name you want??
 		class FPV {
@@ -12,7 +13,8 @@ class CfgFunctions {
 	class BOT {
 		class aCategoryName {
 			// file could under category or function. see BIKI
-			file = "\PBOName\functions";
+			// pbo name = BOT_ArmaFPV_Enhanced
+			file = "\BOT_ArmaFPV_Enhanced\functions";
 			class fpv_deploy {}; //BOT_fnc_fpv_deploy
 		};
 	};
