@@ -17,6 +17,7 @@
 
 params ["_projectile"];
 [_projectile] spawn {
+    params ["_projectile"];
     // does this works for ACE throw? 
     private _unit = getShotParents _projectile #1 ;
 
