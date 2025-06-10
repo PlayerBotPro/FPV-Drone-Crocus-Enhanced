@@ -37,7 +37,7 @@ class CfgWeapons {
             magazines[] = {"BOT_magazine_fpv_AT_muzzle"};
         };
 		class BOT_weapon_fpv_AP_muzzle: ThrowMuzzle {
-            magazines[] = {"BOT_weapon_fpv_AP_muzzle"};
+            magazines[] = {"BOT_magazine_fpv_AP_muzzle"};
         };
     };
 };
