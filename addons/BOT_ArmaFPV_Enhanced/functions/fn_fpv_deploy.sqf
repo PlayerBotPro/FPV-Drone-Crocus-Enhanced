@@ -31,7 +31,7 @@ deleteVehicle _projectile;
 
 private _uav = objNull;
 
-private _sidesUAV = getArray (configFile >> "CfgAmmo" >> typeOf _projectile >> "lxrf_droneVehicle");
+    private _sidesUAV = getArray (configFile >> "CfgAmmo" >> typeOf _projectile >> "BOT_vehicleSide");
 private _sideUAV = switch (side group _unit) do {
     case WEST:		{ _sideUAV select 0 };
     case EAST:		{ _sideUAV select 1 };
