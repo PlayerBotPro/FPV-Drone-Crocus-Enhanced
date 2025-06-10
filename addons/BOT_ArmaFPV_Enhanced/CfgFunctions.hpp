@@ -4,8 +4,10 @@ class CfgFunctions {
 		// you can change FPV to any name you want??
 		class FPV {
 			// BIKI: The file attribute can override the category's loading path segment - it is required for mods.
-			file="x\ArmaFPVEN\addons\BOT_ArmaFPV_Enhanced\functions";
-			class fpv_onDestroy {};
+			// But in here we only want to rewrite only one function, so we use file in side function
+			class fpv_onDestroy {
+				file="x\ArmaFPVEN\addons\BOT_ArmaFPV_Enhanced\functions\fn_fpv_onDestroy.sqf";
+			};
 		};
 	};
 
