@@ -33,10 +33,10 @@ params ["_projectile"];
 
     private _sidesUAV = getArray (configFile >> "CfgAmmo" >> typeOf _projectile >> "BOT_vehicleSide");
     private _sideUAV = switch (side group _unit) do {
-        case WEST:		{ _sideUAV select 0 };
-        case EAST:		{ _sideUAV select 1 };
-        case independent: { _sideUAV select 2 };
-        case civilian:	{ _sideUAV select 3 };
+        case WEST:		{ _sidesUAV select 0 };
+        case EAST:		{ _sidesUAV select 1 };
+        case independent: { _sidesUAV select 2 };
+        case civilian:	{ _sidesUAV select 3 };
     };
 
     _uav = createVehicle [_sideUAV, [0,0,0], [], 0, "FLY"];
