@@ -46,7 +46,7 @@ params ["_projectile"];
     _uav setPosASL _pPos;
     _uav setVectorDirAndUp [_pDir, _pUp];
     _uav setVelocity _pVel;
-    _uav flyInHeight (ASLToAGL eyePos driver _uav);
+    _uav flyInHeight (ASLToAGL eyePos driver _uav)#2;
 
 
     // auto connect to UAV if possible
