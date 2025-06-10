@@ -39,7 +39,7 @@ class CfgAmmo {
 		};
 		
 		// Thanks RF CDLC
-		BOT_vehicleSide = {
+		BOT_vehicleSide[] = {
 			"BOT_vehicle_B_FPV_AT",
 			"BOT_vehicle_O_FPV_AT",
 			"BOT_vehicle_I_FPV_AT",
@@ -47,7 +47,7 @@ class CfgAmmo {
 		};
 	};
 	class BOT_ammo_fpv_AP_muzzle: BOT_ammo_fpv_AT_muzzle{ 
-		BOT_vehicleSide = {
+		BOT_vehicleSide[] = {
 			"BOT_vehicle_B_FPV_AP",
 			"BOT_vehicle_O_FPV_AP",
 			"BOT_vehicle_I_FPV_AP",
