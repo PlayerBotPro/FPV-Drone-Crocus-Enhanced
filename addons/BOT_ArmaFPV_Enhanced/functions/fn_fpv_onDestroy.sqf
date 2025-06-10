@@ -1,7 +1,9 @@
 params ["_uav"];
 
 if (isNull _uav) exitWith {};
-if !(typeOf _uav in ["O_Crocus_AT", "O_Crocus_AP", "B_Crocus_AT", "B_Crocus_AP", "I_Crocus_AT", "I_Crocus_AP"]) exitWIth {};
+
+// comment type check for fpv enhanced
+// if !(typeOf _uav in ["O_Crocus_AT", "O_Crocus_AP", "B_Crocus_AT", "B_Crocus_AP", "I_Crocus_AT", "I_Crocus_AP"]) exitWIth {};
 
 cutText ["", "PLAIN"];
 
