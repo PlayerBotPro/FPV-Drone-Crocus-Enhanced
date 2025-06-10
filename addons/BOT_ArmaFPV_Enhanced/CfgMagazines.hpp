@@ -20,4 +20,4 @@ class CfgMagazines {
         displayName = "BOT FPV AP test";
         ammo = "BOT_ammo_fpv_AP_muzzle";
     };
-}
+};
