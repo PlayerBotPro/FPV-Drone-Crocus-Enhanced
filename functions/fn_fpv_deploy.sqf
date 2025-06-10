@@ -47,7 +47,15 @@ _uav setVectorDirAndUp [_pDir, _pUp];
 _uav setVelocity _pVel;
 _uav flyInHeight (ASLToAGL eyePos driver _uav);
 
-if (has UAV Terminal) then {
+
+// auto connect to UAV if possible
+private _uavTerminalClass = ["B_UavTerminal","O_UavTerminal","I_UavTerminal","C_UavTerminal","I_E_UavTerminal"];
+private _hasUAVTerminal = {
+    if (_x in assignedItems player) exitWith { true };
+    false;
+} forEach _uavTerminalClass;
+
+if (_hasUAVTerminal) then {
     player connectTerminalToUAV _uav;
     driver _uav switchCamera "Internal";
     player remoteControl _uav;
