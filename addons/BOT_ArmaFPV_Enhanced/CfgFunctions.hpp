@@ -11,11 +11,15 @@ class CfgFunctions {
 	// };
 
 	class BOT {
+		file = "x\ArmaFPVEN\addons\BOT_ArmaFPV_Enhanced\functions";
 		class aCategoryName {
 			// file could under category or function. see BIKI
-			// pbo name = BOT_ArmaFPV_Enhanced
-			file = "\BOT_ArmaFPV_Enhanced\functions";
-			class fpv_deploy {}; //BOT_fnc_fpv_deploy
+			// pbo name = BOT_FPV_Enhanced
+			
+			// commented for dev, cuz it gonna be final
+			// class fpv_deploy {}; //BOT_fnc_fpv_deploy
 		};
 	};
 };
+
+// func path is in $PREFIX$???
