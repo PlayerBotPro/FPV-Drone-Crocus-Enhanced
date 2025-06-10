@@ -41,6 +41,7 @@ params ["_projectile"];
     };
 
     _uav = createVehicle [_sideUAV, [0,0,0], [], 0, "FLY"];
+    _uav allowDamage false;
     createVehicleCrew _uav; // TODO: This line causes an error when remote controling a unit in Zeus
 
     _uav setPosASL _pPos;
@@ -48,7 +49,6 @@ params ["_projectile"];
     _uav setDir getDir _unit;
     _uav setVelocity _pVel;
     _uav flyInHeight (ASLToAGL eyePos driver _uav)#2;
-
 
     // auto connect to UAV if possible
     private _uavTerminalClass = ["B_UavTerminal","O_UavTerminal","I_UavTerminal","C_UavTerminal","I_E_UavTerminal"];
@@ -62,4 +62,7 @@ params ["_projectile"];
         driver _uav switchCamera "Internal";
         player remoteControl _uav;
     };
+
+    sleep 1;
+    _uav allowDamage true;
 };
