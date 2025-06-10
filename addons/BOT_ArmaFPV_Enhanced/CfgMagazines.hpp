@@ -12,12 +12,14 @@ class CfgMagazines {
 		displayName = "BOT FPV AT test";
 		displayNameShort = "BOT FPV AT test short";
 		descriptionShort = "BOT FPV AT test descriptionShort";
-		picture = "\A3\Weapons_F\Data\UI\gear_M67_CA.paa";
-		model = "\A3\Weapons_f\ammo\Handgrenade";
+		picture = "\ArmaFPV\data\krokus1.jpg";
+        model = "\ArmaFPV\drone.p3d";
 		ammo = "BOT_ammo_fpv_AT_muzzle";
     };
     class BOT_magazine_fpv_AP_muzzle: BOT_magazine_fpv_AT_muzzle {
         displayName = "BOT FPV AP test";
         ammo = "BOT_ammo_fpv_AP_muzzle";
+        picture = "\ArmaFPV\data\termo.jpg";
+		model = "\ArmaFPV\drone2\drone2.p3d";
     };
 };
