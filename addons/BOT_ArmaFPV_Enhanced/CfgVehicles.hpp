@@ -7,6 +7,9 @@ class CfgVehicles {
 	};
 
 	// The real flying FPV
+	class B_Crocus_AT;
+	class B_Crocus_AP;
+	class O_Crocus_AT;
 	class BOT_vehicle_B_FPV_AT: B_Crocus_AT {
 	};
 	class BOT_vehicle_B_FPV_AP: B_Crocus_AP {
