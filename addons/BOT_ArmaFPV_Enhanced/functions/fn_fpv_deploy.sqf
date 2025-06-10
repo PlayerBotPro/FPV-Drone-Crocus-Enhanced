@@ -24,8 +24,8 @@ params ["_projectile"];
     sleep 1;
 
     private _pPos = getPosASL _projectile;
-    private _pDir = vectorDir _projectile;
-    private _pUp = vectorUp _projectile;
+    // private _pDir = vectorDir _projectile;
+    // private _pUp = vectorUp _projectile;
     private _pVel = velocity _projectile;
 
     deleteVehicle _projectile;
@@ -44,7 +44,8 @@ params ["_projectile"];
     createVehicleCrew _uav; // TODO: This line causes an error when remote controling a unit in Zeus
 
     _uav setPosASL _pPos;
-    _uav setVectorDirAndUp [_pDir, _pUp];
+    // _uav setVectorDirAndUp [_pDir, _pUp];
+    _uav setDir getDir _unit;
     _uav setVelocity _pVel;
     _uav flyInHeight (ASLToAGL eyePos driver _uav)#2;
 
