@@ -15,6 +15,57 @@ class drone_base_F;
 		class ViewOptics;
 	};
 	class O_Crocus_AT;
+
+	// in this CfgVehicles I need to create seperate class for seperate sides??? what a pain
+	// High Definition
+	class BOT_vehicle_FPV_AT_HD_base: B_Crocus_AT {
+		displayName = "FPV AT HD";
+		scope = 1;
+		scopeCurator = 1;
+	};
+	class BOT_vehicle_FPV_AP_HD_base: B_Crocus_AP {
+		displayName = "FPV AP HD";
+	};
+	
+	class BOT_vehicle_B_FPV_AT_HD: BOT_vehicle_FPV_AT_HD_base {
+		scope = 2;
+		scopeCurator = 2;
+	};
+	class BOT_vehicle_B_FPV_AP_HD: BOT_vehicle_FPV_AP_HD_base {
+		scope = 2;
+		scopeCurator = 2;
+	};
+	class BOT_vehicle_O_FPV_AT_HD: BOT_vehicle_B_FPV_AT_HD {
+		side = 0;
+		faction="OPF_F";
+		crew="O_UAV_AI_F";
+	};
+	class BOT_vehicle_O_FPV_AP_HD: BOT_vehicle_B_FPV_AP_HD {
+		side = 0;
+		faction="OPF_F";
+		crew="O_UAV_AI_F";
+	};
+	class BOT_vehicle_I_FPV_AT_HD: BOT_vehicle_B_FPV_AT_HD {
+		side = 2;
+		faction="IND_F";
+		crew="I_UAV_AI_F";
+	};
+	class BOT_vehicle_I_FPV_AP_HD: BOT_vehicle_B_FPV_AP_HD {
+		side = 2;
+		faction="IND_F";
+		crew="I_UAV_AI_F";
+	};
+	class BOT_vehicle_C_FPV_AT_HD: BOT_vehicle_B_FPV_AT_HD {
+		side = 3;
+		faction = "CIV_F";
+		crew = "C_UAV_AI_F";
+	};
+	class BOT_vehicle_C_FPV_AP_HD: BOT_vehicle_B_FPV_AP_HD {
+		side = 3;
+		faction = "CIV_F";
+		crew = "C_UAV_AI_F";
+	};
+
 	class BOT_vehicle_B_FPV_AT: B_Crocus_AT {
 		displayName = "FPV AT";
 	};
