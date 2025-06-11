@@ -7,8 +7,13 @@ class CfgVehicles {
 	};
 
 	// The real flying FPV
-	class B_Crocus_AT;
-	class B_Crocus_AP;
+class drone_base_F;
+	class B_Crocus_AT: drone_base_F {
+		class ViewOptics;
+	};
+	class B_Crocus_AP: B_Crocus_AT {
+		class ViewOptics;
+	};
 	class O_Crocus_AT;
 	class BOT_vehicle_B_FPV_AT: B_Crocus_AT {
 		displayName = "FPV AT";
