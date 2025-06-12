@@ -1,13 +1,21 @@
 class CfgPatches {
 	class BOT_ArmaFPV_Enhanced {
-		author="PlayerBot";
-		name="ArmaFPV Enhanced";
-		url="";
-		requiredAddons[]= {"ArmaFPV_Data"};
-		requiredVersion=0.1;
-		// add CfgVehicles to units[]
-		units[]= {"FPV_Retranslator","BOT_vehicle_B_FPV_AT","BOT_vehicle_B_FPV_AP","BOT_vehicle_FPV_Fiber","BOT_vehicle_FPV_TI","BOT_vehicle_B_FPV_xx"};
+		units[]= {
+			"FPV_Retranslator",
+
+			"BOT_vehicle_B_FPV_AT_HD","BOT_vehicle_B_FPV_AP_HD",
+			"BOT_vehicle_O_FPV_AT_HD","BOT_vehicle_O_FPV_AP_HD",
+			"BOT_vehicle_I_FPV_AT_HD","BOT_vehicle_I_FPV_AP_HD",
+			"BOT_vehicle_C_FPV_AT_HD","BOT_vehicle_C_FPV_AP_HD",
+
+			"BOT_vehicle_B_FPV_AT_TI","BOT_vehicle_B_FPV_AP_TI",
+			"BOT_vehicle_O_FPV_AT_TI","BOT_vehicle_O_FPV_AP_TI",
+			"BOT_vehicle_I_FPV_AT_TI","BOT_vehicle_I_FPV_AP_TI",
+			"BOT_vehicle_C_FPV_AT_TI","BOT_vehicle_C_FPV_AP_TI"
+		};
 		weapons[]={};
+		requiredVersion = 0.1;
+		requiredAddons[]= {"ArmaFPV_Data"};
 	};
 };
 
