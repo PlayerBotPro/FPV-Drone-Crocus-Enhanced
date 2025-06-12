@@ -31,6 +31,9 @@ params ["_projectile"];
     // private _pUp = vectorUp _projectile;
     private _pVel = velocity _projectile;
 
+    // IDK why but if you setPosASL before delete, the FPV wont explode mid air anymore. Thanks to rhs_rgno_impact.sqf
+    _projectile setPosASL [0,0,0];
+    // maybe because deleteVehicle do it in next frame(source: rhs_rgno_impact.sqf)
     deleteVehicle _projectile;
 
     private _uav = objNull;
@@ -44,7 +47,6 @@ params ["_projectile"];
     };
 
     _uav = createVehicle [_sideUAV, [0,0,0], [], 0, "FLY"];
-    _uav allowDamage false;
     createVehicleCrew _uav; // TODO: This line causes an error when remote controling a unit in Zeus
 
     _uav setPosASL _pPos;
@@ -65,7 +67,4 @@ params ["_projectile"];
         driver _uav switchCamera "Internal";
         player remoteControl _uav;
     };
-
-    sleep 1;
-    _uav allowDamage true;
 };
