@@ -38,25 +38,34 @@ class CfgWeapons {
         };
         class ThrowMuzzle: GrenadeLauncher {};
 
+        class BOT_weapon_FPV_base: ThrowMuzzle {
+            // rhs_rgno_impact.sqf use this EH, ace_advanced_throwing_fnc_throwFiredXEH make it compatible 
+			// class Eventhandlers
+			// {
+			// 	class BOT_ThrowAction {
+            //                   //shooter      //projectile
+			// 		fired = "[_this select 0, _this select 6] call BOT_fnc_fpv_deploy;";
+			// 	};
+			// };
+        };
         // I dont know why but other mods do this
-		class BOT_weapon_FPV_AT_LD: ThrowMuzzle {
+		class BOT_weapon_FPV_AT_LD: BOT_weapon_FPV_base {
             magazines[] = {"BOT_magazine_FPV_AT_LD"};
         };
-		class BOT_weapon_FPV_AP_LD: ThrowMuzzle {
+		class BOT_weapon_FPV_AP_LD: BOT_weapon_FPV_base {
             magazines[] = {"BOT_magazine_FPV_AP_LD"};
         };
-		class BOT_weapon_FPV_AT_HD: ThrowMuzzle {
+		class BOT_weapon_FPV_AT_HD: BOT_weapon_FPV_base {
             magazines[] = {"BOT_magazine_FPV_AT_HD"};
         };
-		class BOT_weapon_FPV_AP_HD: ThrowMuzzle {
+		class BOT_weapon_FPV_AP_HD: BOT_weapon_FPV_base {
             magazines[] = {"BOT_magazine_FPV_AP_HD"};
         };
-		class BOT_weapon_FPV_AT_TI: ThrowMuzzle {
+		class BOT_weapon_FPV_AT_TI: BOT_weapon_FPV_base {
             magazines[] = {"BOT_magazine_FPV_AT_TI"};
         };
-		class BOT_weapon_FPV_AP_TI: ThrowMuzzle {
+		class BOT_weapon_FPV_AP_TI: BOT_weapon_FPV_base {
             magazines[] = {"BOT_magazine_FPV_AP_TI"};
-        };
         };
     };
 };
