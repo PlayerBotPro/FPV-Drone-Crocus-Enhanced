@@ -6,15 +6,30 @@ class CfgVehicles {
 		displayName="FPV Signal Booster";
 	};
 
-	// The real flying FPV
-	class drone_base_F;
+	// base class. write like this will not mess original mod
+	class Helicopter_Base_F{
+		// inherent EventHandlers to make Killed EH inherent properly, and makes it possible to use CBA XEH
+		class EventHandlers;
+	};
+	class drone_base_F: Helicopter_Base_F {
+		armor = 2;
+		class EventHandlers: EventHandlers {
+			class BOT
+			{
+				Killed="_this call BOT_fnc_fpv_killedEH";
+			};
+		};
+	};
+
+	// maybe AT and AP have different ViewOptics params, so I make it seperate
 	class B_Crocus_AT: drone_base_F {
 		class ViewOptics;
+		class EventHandlers: EventHandlers {};
 	};
 	class B_Crocus_AP: B_Crocus_AT {
 		class ViewOptics;
+		class EventHandlers: EventHandlers {};
 	};
-	class O_Crocus_AT;
 
 	// in this CfgVehicles I need to create seperate class for seperate sides??? what a pain
 	// High Definition

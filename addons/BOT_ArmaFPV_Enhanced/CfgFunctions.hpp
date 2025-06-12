@@ -19,6 +19,7 @@ class CfgFunctions {
 			
 			// commented for dev, cuz it gonna be final
 			// class fpv_deploy {}; //BOT_fnc_fpv_deploy
+			// class fpv_killedEH {}; //BOT_fnc_fpv_killedEH
 		};
 	};
 };
