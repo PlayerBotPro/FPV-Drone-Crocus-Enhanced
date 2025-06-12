@@ -34,9 +34,7 @@ class CfgWeapons {
             "BOT_weapon_FPV_AT_HD",
             "BOT_weapon_FPV_AP_HD",
             "BOT_weapon_FPV_AT_TI",
-            "BOT_weapon_FPV_AP_TI",
-            "BOT_weapon_fpv_AT_muzzle",
-            "BOT_weapon_fpv_AP_muzzle"
+            "BOT_weapon_FPV_AP_TI"
         };
         class ThrowMuzzle: GrenadeLauncher {};
 
@@ -59,13 +57,6 @@ class CfgWeapons {
 		class BOT_weapon_FPV_AP_TI: ThrowMuzzle {
             magazines[] = {"BOT_magazine_FPV_AP_TI"};
         };
-
-		class BOT_weapon_fpv_AT_muzzle: ThrowMuzzle {
-            // CfgMagazines class name
-            magazines[] = {"BOT_magazine_fpv_AT_muzzle"};
-        };
-		class BOT_weapon_fpv_AP_muzzle: ThrowMuzzle {
-            magazines[] = {"BOT_magazine_fpv_AP_muzzle"};
         };
     };
 };

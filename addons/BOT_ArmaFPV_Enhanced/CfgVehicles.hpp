@@ -130,22 +130,6 @@ class CfgVehicles {
 		crew = "C_UAV_AI_F";
 	};
 	
-	class BOT_vehicle_B_FPV_AT: B_Crocus_AT {
-		displayName = "FPV AT";
-	};
-	class BOT_vehicle_B_FPV_AP: B_Crocus_AP {
-		displayName = "FPV AP";
-	};
-	class BOT_vehicle_FPV_Fiber: O_Crocus_AT {
-		//inherent from O_Crocus_AT?
-	};
-	class BOT_vehicle_FPV_TI: O_Crocus_AT {
-		//inherent from O_Crocus_AT?
-	};
-	class BOT_vehicle_B_FPV_xx: O_Crocus_AT {
-		//inherent from O_Crocus_AT?
-	};
-
 	// currently not needed for throwable FPVs
 	// Item (Ground weapon holder)
 	// class Item_Base_F;

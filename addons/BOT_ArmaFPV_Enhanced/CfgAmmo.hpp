@@ -131,32 +131,4 @@ class CfgAmmo {
 			"BOT_vehicle_C_FPV_AP_TI"
 		};
 	};
-
-	class BOT_ammo_fpv_AT_muzzle: GrenadeHand {
-		model = "\ArmaFPV\drone.p3d";
-		explosionTime = -1;
-		timeToLive = 1e+10;
-		// https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#Ammo_Config_Events
-		class Eventhandlers {
-			init = "_this call BOT_fnc_fpv_deploy";
-		};
-		
-		// Thanks RF CDLC
-		BOT_vehicleSide[] = {
-			"BOT_vehicle_B_FPV_AT",
-			"BOT_vehicle_O_FPV_AT",
-			"BOT_vehicle_I_FPV_AT",
-			"BOT_vehicle_C_FPV_AT"
-		};
-	};
-	class BOT_ammo_fpv_AP_muzzle: BOT_ammo_fpv_AT_muzzle{ 
-		model = "\ArmaFPV\drone2\drone2.p3d";
-		BOT_vehicleSide[] = {
-			"BOT_vehicle_B_FPV_AP",
-			"BOT_vehicle_O_FPV_AP",
-			"BOT_vehicle_I_FPV_AP",
-			"BOT_vehicle_C_FPV_AP"
-		};
-
-	};
 };
