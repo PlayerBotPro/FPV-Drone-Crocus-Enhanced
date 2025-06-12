@@ -56,6 +56,7 @@ params ["_projectile"];
     _uav flyInHeight (ASLToAGL eyePos driver _uav)#2;
 
     // auto connect to UAV if possible
+    sleep 1;
     private _uavTerminalClass = ["B_UavTerminal","O_UavTerminal","I_UavTerminal","C_UavTerminal","I_E_UavTerminal"];
     private _hasUAVTerminal = {
         if (_x in assignedItems player) exitWith { true };
