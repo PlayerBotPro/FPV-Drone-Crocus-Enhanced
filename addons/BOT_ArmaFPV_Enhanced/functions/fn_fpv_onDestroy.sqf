@@ -26,9 +26,12 @@ if (local _killer) then {
 	[_killer, false] remoteExec ["setCaptive", 2];
 };
 
-private _missile = createVehicle [_missileType, _uav modelToWorld [0, 0, 0]];
+_impactPos = _uav modelToWorld [0, 0, 0];
+private _missile = createVehicle [_missileType, [0, 0, 100]];
+_uav setPosASL [0,0,200];
 
 _missile setVectorDirAndUp [vectorDir _uav, vectorUp _uav];
+_missile setPosATL _impactPos;
 
 [_missile, [_killer, _instigator]] remoteExec ["setShotParents", 2];
 [_missile, true] remoteExec ["hideObjectGlobal", 2];
