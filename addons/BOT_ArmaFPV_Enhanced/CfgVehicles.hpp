@@ -16,6 +16,7 @@ class CfgVehicles {
 		class EventHandlers: EventHandlers {
 			class BOT
 			{
+				HandleDamage = "_this call BOT_fnc_fpv_handleDamage";
 				Killed="_this call BOT_fnc_fpv_killedEH";
 			};
 		};

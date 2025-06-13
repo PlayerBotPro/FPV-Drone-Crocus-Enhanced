@@ -1,6 +1,6 @@
 // DB_fnc_fpv_onDestroy = compileScript ["x\ArmaFPVEN\addons\BOT_ArmaFPV_Enhanced\functions\fn_fpv_onDestroy.sqf"]
 
-params ["_uav", "_source", "_damage"];
+params ["_uav"];
 
 if (isNull _uav) exitWith {};
 
@@ -14,7 +14,7 @@ private _instigator = (UAVControl _uav) # 0;
 private _missileType = "";
 private _uavType = toLower (typeOf _uav);
 
-_killer actionNow ["BackFromUAV"];
+// _killer actionNow ["BackFromUAV"];
 
 if (_uavType find "at" > -1) then {
 	_missileType = "R_PG7_F";
@@ -42,8 +42,8 @@ _missile setPosATL _impactPos;
 
 // score board
 // when _damage > 1, kill will count into statistics, <1 will not
-systemChat format ["HITEH: _unit: %1, _source: %2, _damage: %3", _uav, _source, _damage];
-// if (_damage < 1) then {
+systemChat format ["HITEH: _unit: %1, _source: %2, _damage: %3", _uav, _this#1, _this#2];
+// if (_this#2 < 1) then {
 // 	// maybe this will work
 // 	[_uav, [1, true, _killer, _instigator]] remoteExec ["setDamage", 2];
 // };
