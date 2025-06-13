@@ -4,16 +4,19 @@ params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitPartInd
 
 systemChat str(_this);
 
-_uavType = toLower (typeOf _unit);
-_missileType = "";
-_vectorDir = vectorDir _unit;
-_vectorUp = vectorUp _unit;
-_impactPos = _unit modelToWorld [0, 0, 0];
-
 if (_damage > 0.1) then {
-    // _unit call DB_fnc_fpv_onDestroy;
+
+    // save uav data before delete
+    _uavType = toLower (typeOf _unit);
+    _missileType = "";
+    _vectorDir = vectorDir _unit;
+    _vectorUp = vectorUp _unit;
+    _impactPos = _unit modelToWorld [0, 0, 0];
+    _killer = (UAVControl _unit) # 0;
+
     deleteVehicle _unit;
 
+    // warhead create
     if (_uavType find "at" > -1) then {
         _missileType = "R_PG7_F";
     } else {
@@ -21,11 +24,17 @@ if (_damage > 0.1) then {
             _missileType = "DemoCharge_Remote_Ammo";
         };
     };
-
     private _missile = createVehicle [_missileType, [0, 0, 100]];
-
     _missile setVectorDirAndUp [_vectorDir, _vectorUp];
+    [_missile, [_killer, _killer]] remoteExec ["setShotParents", 2];
+
+    // warhead attack
+    // waitUntil {
+    //     (getShotParents _missile) isEqualTo [_killer, _killer];
+    // };
+    systemChat str(getShotParents _missile);
     _missile setPosATL _impactPos;
+    triggerAmmo _missile; 
 };
 
 0
