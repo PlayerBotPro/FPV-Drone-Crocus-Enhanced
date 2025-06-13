@@ -14,6 +14,8 @@ private _instigator = (UAVControl _uav) # 0;
 private _missileType = "";
 private _uavType = toLower (typeOf _uav);
 
+_killer actionNow ["BackFromUAV"];
+
 if (_uavType find "at" > -1) then {
 	_missileType = "R_PG7_F";
 } else {
@@ -41,15 +43,15 @@ _missile setPosATL _impactPos;
 // score board
 // when _damage > 1, kill will count into statistics, <1 will not
 systemChat format ["HITEH: _unit: %1, _source: %2, _damage: %3", _uav, _source, _damage];
-if (_damage < 1) then {
-	// maybe this will work
-	[_uav, [1, true, _killer, _instigator]] remoteExec ["setDamage", 2];
-};
+// if (_damage < 1) then {
+// 	// maybe this will work
+// 	[_uav, [1, true, _killer, _instigator]] remoteExec ["setDamage", 2];
+// };
 // call BOT_fnc_fpv_killedEH;
 
 // delete will bug with setDamage
-// deleteVehicle _uav;
-_uav hideObjectGlobal true;
+deleteVehicle _uav;
+// _uav hideObjectGlobal true;
 
 [
 	{
@@ -66,9 +68,9 @@ _uav hideObjectGlobal true;
 ] call CBA_fnc_waitUntilAndExecute;
 
 // remove wreck after interval
-[_uav] spawn {
-	params ["_uav"];
+// [_uav] spawn {
+// 	params ["_uav"];
 
-	sleep 1;
-	deleteVehicle _uav;
-};
+// 	sleep 1;
+// 	deleteVehicle _uav;
+// };
