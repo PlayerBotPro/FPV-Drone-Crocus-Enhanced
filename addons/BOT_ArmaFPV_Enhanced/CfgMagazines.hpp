@@ -6,7 +6,7 @@ class CfgMagazines {
     // base class, same as CfgAmmo
     class BOT_magazine_FPV_AT_base: HandGrenade {
         scope = 1;
-		mass = 10;
+		mass = 33;
 		descriptionShort = "Throw me out to fly";
 		picture = "\ArmaFPV\data\krokus1.jpg";
         model = "\ArmaFPV\drone.p3d";
