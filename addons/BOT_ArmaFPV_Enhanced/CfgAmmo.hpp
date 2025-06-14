@@ -35,6 +35,7 @@ class CfgAmmo {
 	class BOT_ammo_FPV_AT_fake_base: GrenadeHand {
 		model = "\ArmaFPV\drone.p3d";
 		class Eventhandlers {
+			// init EH wont compatible with ACE
 			fired = "_this#6 call BOT_fnc_fpv_deploy";
 		};
 	};
