@@ -14,6 +14,10 @@ class CfgVehicles {
 	class drone_base_F: Helicopter_Base_F {
 		armor = 2;
 		class EventHandlers: EventHandlers {
+			class ArmaFPV {
+				// remove original mod hit EH
+				hit="";
+			};
 			class BOT
 			{
 				HandleDamage = "_this call BOT_fnc_fpv_handleDamage";
