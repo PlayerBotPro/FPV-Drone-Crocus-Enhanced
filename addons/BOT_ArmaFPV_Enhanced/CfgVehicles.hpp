@@ -21,7 +21,8 @@ class CfgVehicles {
 			class BOT
 			{
 				HandleDamage = "_this call BOT_fnc_fpv_handleDamage";
-				Killed="_this call BOT_fnc_fpv_killedEH";
+				// handleDamage is enough currently.
+				// Killed="_this call BOT_fnc_fpv_killedEH";
 			};
 		};
 	};
