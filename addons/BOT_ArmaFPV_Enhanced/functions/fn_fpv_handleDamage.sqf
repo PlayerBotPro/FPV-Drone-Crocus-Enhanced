@@ -4,7 +4,7 @@ params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitPartInd
 
 systemChat str(_this);
 
-if (_damage > 0.1) then {
+if (_damage > 0.1) exitWith {
 
     // save uav data before delete
     _uavType = toLower (typeOf _unit);
@@ -35,7 +35,6 @@ if (_damage > 0.1) then {
     // };
     systemChat str(getShotParents _missile);
     _missile setPosATL _impactPos;
-    triggerAmmo _missile; 
+    triggerAmmo _missile;
+    0
 };
-
-0
