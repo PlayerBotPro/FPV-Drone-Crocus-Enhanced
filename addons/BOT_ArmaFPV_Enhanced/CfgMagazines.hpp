@@ -3,11 +3,6 @@
 // throwables
 class CfgMagazines {
     class HandGrenade;
-    class BOT_magazine_fpv_throwable_base: HandGrenade {
-        scope = 1;
-		mass = 10;
-    };
-
     // base class, same as CfgAmmo
     class BOT_magazine_FPV_AT_base: HandGrenade {
         scope = 1;
