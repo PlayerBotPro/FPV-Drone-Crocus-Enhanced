@@ -17,11 +17,12 @@ if (_damage > 0.1) then {
     deleteVehicle _unit;
 
     // warhead create
+    // maybe we can change warhead type via CBA settings in the future
     if (_uavType find "at" > -1) then {
-        _missileType = "R_PG7_F";
+        _missileType = "FPV_RPG42_AT";
     } else {
         if (_uavType find "ap" > -1) then {
-            _missileType = "DemoCharge_Remote_Ammo";
+            _missileType = "R_TBG32V_F";
         };
     };
     private _missile = createVehicle [_missileType, [0, 0, 100]];
