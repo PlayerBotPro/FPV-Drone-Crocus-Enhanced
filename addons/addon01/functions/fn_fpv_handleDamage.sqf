@@ -30,9 +30,9 @@ if (_damage > 0.1) exitWith {
     [_missile, [_killer, _killer]] remoteExec ["setShotParents", 2];
 
     // warhead attack
-    // waitUntil {
-    //     (getShotParents _missile) isEqualTo [_killer, _killer];
-    // };
+    waitUntil {
+        (getShotParents _missile) isEqualTo [_killer, _killer];
+    };
     systemChat str(getShotParents _missile);
     _missile setPosATL _impactPos;
     triggerAmmo _missile;
