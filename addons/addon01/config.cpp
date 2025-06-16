@@ -1,5 +1,5 @@
 class CfgPatches {
-	class BOT_ArmaFPV_Enhanced {
+	class BOT_FPV_Enhanced {
 		units[]= {
 			"FPV_Retranslator",
 
