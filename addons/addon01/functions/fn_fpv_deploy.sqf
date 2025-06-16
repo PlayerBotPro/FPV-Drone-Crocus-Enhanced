@@ -21,11 +21,11 @@
 params ["_projectile"];
 [_projectile] spawn {
     params ["_projectile"];
-    // does this works for ACE throw? 
-    private _unit = getShotParents _projectile #1 ;
 
     sleep 1;
 
+    // does this works for ACE throw? 
+    private _unit = getShotParents _projectile #0 ;
     private _pPos = getPosASL _projectile;
     // private _pDir = vectorDir _projectile;
     // private _pUp = vectorUp _projectile;
