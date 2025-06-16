@@ -22,8 +22,8 @@ params ["_projectile"];
 
 sleep 1;
 
-// does this works for ACE throw? 
-private _unit = getShotParents _projectile #0 ;
+// ACE throw use CBA_fnc_serverEvent to throw, so, server need this mod to run properply with ACE throw
+private _unit = getShotParents _projectile #1 ;
 private _pPos = getPosASL _projectile;
 // private _pDir = vectorDir _projectile;
 // private _pUp = vectorUp _projectile;
