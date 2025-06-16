@@ -15,7 +15,7 @@
         Hello World
 
     Hello: 
-        BOT_fnc_fpv_deploy = compileScript ["x\ArmaFPVEN\addons\BOT_ArmaFPV_Enhanced\functions\fn_fpv_deploy.sqf"]
+        BOT_fnc_fpv_deploy = compileScript ["x\BOT_FPV_Enhanced\addons\addon01\functions\fn_fpv_deploy.sqf"]
 */
 
 params ["_projectile"];

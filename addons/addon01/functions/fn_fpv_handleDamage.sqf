@@ -1,4 +1,4 @@
-// BOT_fnc_fpv_handleDamage = compileScript ["x\ArmaFPVEN\addons\BOT_ArmaFPV_Enhanced\functions\fn_fpv_handleDamage.sqf"];
+// BOT_fnc_fpv_handleDamage = compileScript ["x\BOT_FPV_Enhanced\addons\addon01\functions\fn_fpv_handleDamage.sqf"];
 
 params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitPartIndex", "_instigator", "_hitPoint", "_directHit", "_context"];
 

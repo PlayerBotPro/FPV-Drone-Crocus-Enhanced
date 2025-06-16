@@ -1,4 +1,4 @@
-// BOT_fnc_fpv_killedEH = compileScript ["x\ArmaFPVEN\addons\BOT_ArmaFPV_Enhanced\functions\fn_fpv_killedEH.sqf"];
+// BOT_fnc_fpv_killedEH = compileScript ["x\BOT_FPV_Enhanced\addons\addon01\functions\fn_fpv_killedEH.sqf"];
 params ["_unit", "_killer", "_instigator"];
 
 // _killer actionNow ["BackFromUAV"];

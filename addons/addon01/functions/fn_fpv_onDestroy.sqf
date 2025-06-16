@@ -1,4 +1,4 @@
-// DB_fnc_fpv_onDestroy = compileScript ["x\ArmaFPVEN\addons\BOT_ArmaFPV_Enhanced\functions\fn_fpv_onDestroy.sqf"]
+// DB_fnc_fpv_onDestroy = compileScript ["x\BOT_FPV_Enhanced\addons\addon01\functions\fn_fpv_onDestroy.sqf"]
 
 params ["_uav"];
 
