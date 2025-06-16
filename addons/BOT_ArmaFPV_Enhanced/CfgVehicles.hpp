@@ -28,14 +28,49 @@ class CfgVehicles {
 		};
 	};
 
-	// maybe AT and AP have different ViewOptics params, so I make it seperate
+	// replace hit EH from original mod
+	class O_Crocus_AT: drone_base_F {
+		class EventHandlers: EventHandlers {
+			class ArmaFPV {
+				hit="";
+			};
+		};
+	};
+	class O_Crocus_AP: O_Crocus_AT {
+		class EventHandlers: EventHandlers {
+			class ArmaFPV {
+				hit="";
+			};
+		};
+
+	};
 	class B_Crocus_AT: drone_base_F {
-		class ViewOptics;
-		class EventHandlers: EventHandlers {};
+		class EventHandlers: EventHandlers {
+			class ArmaFPV {
+				hit="";
+			};
+		};
 	};
 	class B_Crocus_AP: B_Crocus_AT {
-		class ViewOptics;
-		class EventHandlers: EventHandlers {};
+		class EventHandlers: EventHandlers {
+			class ArmaFPV {
+				hit="";
+			};
+		};
+	};
+	class I_Crocus_AT: drone_base_F {
+		class EventHandlers: EventHandlers {
+			class ArmaFPV {
+				hit="";
+			};
+		};
+	};
+	class I_Crocus_AP: I_Crocus_AT {
+		class EventHandlers: EventHandlers {
+			class ArmaFPV {
+				hit="";
+			};
+		};
 	};
 
 	// in this CfgVehicles I need to create seperate class for seperate sides??? what a pain
