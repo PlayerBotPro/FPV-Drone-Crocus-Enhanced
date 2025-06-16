@@ -13,6 +13,7 @@ class CfgVehicles {
 	};
 	class drone_base_F: Helicopter_Base_F {
 		armor = 2;
+		class ViewOptics;
 		class EventHandlers: EventHandlers {
 			class ArmaFPV {
 				// remove original mod hit EH
