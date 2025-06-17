@@ -31,6 +31,7 @@ if (_damage > 0.1) exitWith {
 
     // warhead attack
     waitUntil {
+        // because of missile is moved to place after success of setShotParents, so if server doesnt have this mod, there wont have explode
         (getShotParents _missile) isEqualTo [_killer, _killer];
     };
     systemChat str(getShotParents _missile);
