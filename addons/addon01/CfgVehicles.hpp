@@ -7,7 +7,8 @@ class CfgVehicles {
 	};
 
 	// base class. write like this will not mess original mod
-	class Helicopter_Base_F{
+	class Helicopter;
+	class Helicopter_Base_F: Helicopter {
 		// inherent EventHandlers to make Killed EH inherent properly, and makes it possible to use CBA XEH
 		class EventHandlers;
 	};
