@@ -83,6 +83,8 @@ class CfgVehicles {
 	};
 	class BOT_vehicle_FPV_AP_HD_base: B_Crocus_AP {
 		displayName = "FPV AP HD";
+		scope = 1;
+		scopeCurator = 1;
 	};
 	
 	class BOT_vehicle_B_FPV_AT_HD: BOT_vehicle_FPV_AT_HD_base {
@@ -139,6 +141,8 @@ class CfgVehicles {
 	};
 	class BOT_vehicle_FPV_AP_TI_base: B_Crocus_AP {
 		displayName = "FPV AP TI";
+		scope = 1;
+		scopeCurator = 1;
 		class ViewOptics: ViewOptics {
 			visionMode[] = {
 				"Normal",
