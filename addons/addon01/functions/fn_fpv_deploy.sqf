@@ -20,6 +20,11 @@
 
 params ["_projectile"];
 
+// _gunner = getShotParents _projectile #1;
+// systemChat format ["_gunner: %1", _gunner];
+
+if (!local _projectile) exitWith {};
+
 sleep 1;
 
 // ACE throw use CBA_fnc_serverEvent to throw, so, server need this mod to run properply with ACE throw

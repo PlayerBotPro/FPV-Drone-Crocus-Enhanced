@@ -2,7 +2,9 @@
 
 params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitPartIndex", "_instigator", "_hitPoint", "_directHit", "_context"];
 
-systemChat str(_this);
+if (!local _unit) exitWith {};
+
+// systemChat str(_this);
 
 if (_damage > 0.1) exitWith {
 
@@ -34,7 +36,9 @@ if (_damage > 0.1) exitWith {
         // because of missile is moved to place after success of setShotParents, so if server doesnt have this mod, there wont have explode
         (getShotParents _missile) isEqualTo [_killer, _killer];
     };
-    systemChat str(getShotParents _missile);
+
+    // systemChat str(getShotParents _missile);
+    
     _missile setPosATL _impactPos;
     triggerAmmo _missile;
     0
