@@ -53,6 +53,11 @@ private _sideUAV = switch (side group _unit) do {
 _uav = createVehicle [_sideUAV, [0,0,0], [], 0, "FLY"];
 createVehicleCrew _uav; // TODO: This line causes an error when remote controling a unit in Zeus
 
+// FPV_isUavCaptive
+if (FPV_isUavCaptive) then {
+    _uav setCaptive true;
+};
+
 _uav setPosASL _pPos;
 // _uav setVectorDirAndUp [_pDir, _pUp];
 _uav setDir getDir _unit;

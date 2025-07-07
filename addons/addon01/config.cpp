@@ -18,7 +18,7 @@ class CfgPatches {
 		requiredAddons[]= {"ArmaFPV_Data"};
 
 		// https://github.com/CBATeam/CBA_A3/wiki/Versioning-System
-		versionStr = "1.0.1";
+		versionStr = "1.0.2";
 	};
 };
 
